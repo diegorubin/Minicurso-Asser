@@ -1,0 +1,63 @@
+10
+
+dir
+0
+svn+ssh://pandorabox.no-ip.org/Repos/diego/ruby/Minicurso-Asser/curso/config/initializers
+svn+ssh://pandorabox.no-ip.org/Repos/diego
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+47462c79-b3ad-de11-b99e-000ae6e70080
+
+inflections.rb
+file
+
+
+
+add
+
+session_store.rb
+file
+
+
+
+add
+
+backtrace_silencers.rb
+file
+
+
+
+add
+
+new_rails_defaults.rb
+file
+
+
+
+add
+
+mime_types.rb
+file
+
+
+
+add
+

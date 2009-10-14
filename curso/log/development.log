@@ -1,0 +1,2163 @@
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:35:55) [GET]
+Rendering home/index
+Completed in 90ms (View: 88, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:37:07) [GET]
+Rendering home/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:37:37) [GET]
+Rendering home/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (8.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (4.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "exemplos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "codigo" text, "visivel" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091014143902')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("exemplos")[0m
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:42:48) [GET]
+Rendering home/index
+ERROR: compiling _run_erb_app47views47home47index46html46erb RAISED compile error
+/home/diego/ruby/Minicurso-Asser/curso/app/views/home/index.html.erb:5: syntax error, unexpected '<'
+; @output_buffer.concat(( link_to e.titulo, e> <br />
+                                                ^
+/home/diego/ruby/Minicurso-Asser/curso/app/views/home/index.html.erb:5: unterminated string meets end of file
+Function body:           def _run_erb_app47views47home47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Minicurso de Introdu\303\247\303\243o ao Ruby</h1>\n<h2>Exemplos</h2>\n\n"
+
+
+;  @exemplos.each do |e| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( link_to e.titulo, e> <br />
+<% end ).to_s); @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/diego/ruby/Minicurso-Asser/curso/app/views/home/index.html.erb:5:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/diego/ruby/Minicurso-Asser/curso/app/views/home/index.html.erb:5: syntax error, unexpected '<'
+; @output_buffer.concat(( link_to e.titulo, e> <br />
+                                                ^
+/home/diego/ruby/Minicurso-Asser/curso/app/views/home/index.html.erb:5: unterminated string meets end of file) on line #5 of app/views/home/index.html.erb:
+2: <h2>Exemplos</h2>
+3: 
+4: <% @exemplos.each do |e| %>
+5:   <%= link_to e.titulo, e> <br />
+6: <% end %>
+
+    app/views/home/index.html.erb:5:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (127.2ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:43:04) [GET]
+Rendering home/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/home/index.html.erb:
+1: <h1>Minicurso de Introdução ao Ruby</h1>
+2: <h2>Exemplos</h2>
+3: 
+4: <% @exemplos.each do |e| %>
+5:   <%= link_to e.titulo, e %> <br />
+6: <% end %>
+
+    app/views/home/index.html.erb:4
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:43:48) [GET]
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:44:08) [GET]
+
+SyntaxError (/home/diego/ruby/Minicurso-Asser/curso/app/controllers/home_controller.rb:3: syntax error, unexpected '=', expecting ')'
+    @exemplos = Exemplo.find(:visivel = true)
+                                       ^):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:47:35) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Exemplo without an ID):
+  app/controllers/home_controller.rb:3:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:49:12) [GET]
+  [4;35;1mExemplo Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: true: SELECT * FROM "exemplos" WHERE (visivel = true) [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: true: SELECT * FROM "exemplos" WHERE (visivel = true) ):
+  app/controllers/home_controller.rb:3:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (134.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:49:49) [GET]
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE (visivel = 0) [0m
+Rendering home/index
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:51:28) [GET]
+  [4;35;1mExemplo Load (0.5ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/index
+Completed in 127ms (View: 121, DB: 1) | 200 OK [http://localhost/exemplos]
+
+
+Processing ExemplosController#new (for ::ffff:127.0.0.1 at 2009-10-14 11:51:30) [GET]
+Rendering template within layouts/exemplos
+Rendering exemplos/new
+Completed in 26ms (View: 17, DB: 0) | 200 OK [http://localhost/exemplos/new]
+
+
+Processing ExemplosController#create (for ::ffff:127.0.0.1 at 2009-10-14 11:52:27) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE=", "exemplo"=>{"visivel"=>"0", "nome"=>"Exemplo 1 - Fatorial", "codigo"=>"# Exemplo 1\r\n# Calcula o fatorial de um numero de forma recursiva.\r\n# Este e em bom exemplo do poder do ruby, por nao utilizar tipo primitivos, e possivel alcancar resultados mais facilmente do que em outras linguagens, tipo pascal ou c. \r\ndef fatorial(n)\r\n    if(n > 1)\r\n        n * fatorial(n-1)\r\n    else\r\n        1\r\n    end\r\nend\r\n# Chama o metodo fatorial e passa como argumento o primeiro argumento passado na chamada da rotina por linha de comando.\r\nputs fatorial(ARGV[0].to_i)"}}
+  [4;36;1mExemplo Create (0.8ms)[0m   [0;1mINSERT INTO "exemplos" ("visivel", "created_at", "nome", "updated_at", "codigo") VALUES('f', '2009-10-14 14:52:28', 'Exemplo 1 - Fatorial', '2009-10-14 14:52:28', '# Exemplo 1
+# Calcula o fatorial de um numero de forma recursiva.
+# Este e em bom exemplo do poder do ruby, por nao utilizar tipo primitivos, e possivel alcancar resultados mais facilmente do que em outras linguagens, tipo pascal ou c. 
+def fatorial(n)
+ if(n > 1)
+ n * fatorial(n-1)
+ else
+ 1
+ end
+end
+# Chama o metodo fatorial e passa como argumento o primeiro argumento passado na chamada da rotina por linha de comando.
+puts fatorial(ARGV[0].to_i)')[0m
+Redirected to http://localhost:3000/exemplos/1
+Completed in 93ms (DB: 1) | 302 Found [http://localhost/exemplos]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 11:52:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.7ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:52:36) [GET]
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE (visivel = 0) [0m
+Rendering home/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:52:37) [GET]
+  [4;35;1mExemplo Load (0.5ms)[0m   [0mSELECT * FROM "exemplos" WHERE (visivel = 0) [0m
+Rendering home/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:52:38) [GET]
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE (visivel = 0) [0m
+Rendering home/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:54:31) [GET]
+  [4;35;1mExemplo Load (0.9ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering home/index
+
+ActionView::TemplateError (undefined method `titulo' for #<Exemplo:0xb7a37520>) on line #5 of app/views/home/index.html.erb:
+2: <h2>Exemplos</h2>
+3: 
+4: <% @exemplos.each do |e| %>
+5:   <%= link_to e.titulo, e %> <br />
+6: <% end %>
+
+    app/views/home/index.html.erb:5
+    app/views/home/index.html.erb:4:in `each'
+    app/views/home/index.html.erb:4
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (133.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:54:49) [GET]
+  [4;36;1mExemplo Load (0.9ms)[0m   [0;1mSELECT * FROM "exemplos" [0m
+Rendering home/index
+
+ActionView::TemplateError (undefined method `titulo' for #<Exemplo:0xb73eec18>) on line #5 of app/views/home/index.html.erb:
+2: <h2>Exemplos</h2>
+3: 
+4: <% @exemplos.each do |e| %>
+5:   <%= link_to e.titulo, e %> <br />
+6: <% end %>
+
+    app/views/home/index.html.erb:5
+    app/views/home/index.html.erb:4:in `each'
+    app/views/home/index.html.erb:4
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:54:50) [GET]
+  [4;35;1mExemplo Load (1.0ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering home/index
+
+ActionView::TemplateError (undefined method `titulo' for #<Exemplo:0xb75506c4>) on line #5 of app/views/home/index.html.erb:
+2: <h2>Exemplos</h2>
+3: 
+4: <% @exemplos.each do |e| %>
+5:   <%= link_to e.titulo, e %> <br />
+6: <% end %>
+
+    app/views/home/index.html.erb:5
+    app/views/home/index.html.erb:4:in `each'
+    app/views/home/index.html.erb:4
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:54:51) [GET]
+  [4;36;1mExemplo Load (0.9ms)[0m   [0;1mSELECT * FROM "exemplos" [0m
+Rendering home/index
+
+ActionView::TemplateError (undefined method `titulo' for #<Exemplo:0xb7a04e7c>) on line #5 of app/views/home/index.html.erb:
+2: <h2>Exemplos</h2>
+3: 
+4: <% @exemplos.each do |e| %>
+5:   <%= link_to e.titulo, e %> <br />
+6: <% end %>
+
+    app/views/home/index.html.erb:5
+    app/views/home/index.html.erb:4:in `each'
+    app/views/home/index.html.erb:4
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (136.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 11:55:01) [GET]
+  [4;35;1mExemplo Load (0.9ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 11:55:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 12:13:35) [GET]
+  [4;35;1mExemplo Load (0.9ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 12:13:37) [GET]
+  [4;36;1mExemplo Load (1.0ms)[0m   [0;1mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 86ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#index (for ::ffff:127.0.0.1 at 2009-10-14 12:13:40) [GET]
+  [4;35;1mExemplo Load (23.7ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/index
+Completed in 42ms (View: 12, DB: 24) | 200 OK [http://localhost/exemplos]
+
+
+Processing ExemplosController#edit (for ::ffff:127.0.0.1 at 2009-10-14 12:13:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/edit
+Completed in 49ms (View: 40, DB: 1) | 200 OK [http://localhost/exemplos/1/edit]
+
+
+Processing ExemplosController#update (for ::ffff:127.0.0.1 at 2009-10-14 12:13:53) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE=", "exemplo"=>{"visivel"=>"1", "nome"=>"Exemplo 1 - Fatorial", "codigo"=>"# Exemplo 1\r\n# Calcula o fatorial de um numero de forma recursiva.\r\n# Este e em bom exemplo do poder do ruby, por nao utilizar tipo primitivos, e possivel alcancar resultados mais facilmente do que em outras linguagens, tipo pascal ou c. \r\ndef fatorial(n)\r\n    if(n > 1)\r\n        n * fatorial(n-1)\r\n    else\r\n        1\r\n    end\r\nend\r\n# Chama o metodo fatorial e passa como argumento o primeiro argumento passado na chamada da rotina por linha de comando.\r\nputs fatorial(ARGV[0].to_i)"}, "id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+  [4;36;1mExemplo Update (0.5ms)[0m   [0;1mUPDATE "exemplos" SET "updated_at" = '2009-10-14 15:13:53', "visivel" = 't' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/exemplos/1
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 12:13:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.7ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 12:13:56) [GET]
+  [4;36;1mExemplo Load (1.0ms)[0m   [0;1mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 110ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 12:13:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.7ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 12:22:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+
+ActionView::TemplateError (undefined method `duvidas' for #<Exemplo:0xb7428238>) on line #14 of app/views/exemplos/show.html.erb:
+11: </p>
+12: 
+13: <h3>Dúvidas</h3>
+14:   <% @exemplo.duvidas.each do |d| %>
+15:     <b>Autor:</b>
+16:     <%=h d.autor %>
+17:     <br>
+
+    app/views/exemplos/show.html.erb:14
+    app/controllers/exemplos_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (139.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 12:51:17) [GET]
+  [4;35;1mExemplo Load (1.0ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 68ms (View: 60, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 12:51:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+
+ActionView::TemplateError (undefined method `duvidas' for #<Exemplo:0xb7439a60>) on line #14 of app/views/exemplos/show.html.erb:
+11: </p>
+12: 
+13: <h3>Dúvidas</h3>
+14:   <% @exemplo.duvidas.each do |d| %>
+15:     <b>Autor:</b>
+16:     <%=h d.autor %>
+17:     <br>
+
+    app/views/exemplos/show.html.erb:14
+    app/controllers/exemplos_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (15.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:17:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.9ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+
+ActionView::TemplateError (undefined method `duvidas' for #<Exemplo:0xb7573e58>) on line #14 of app/views/exemplos/show.html.erb:
+11: </p>
+12: 
+13: <h3>Dúvidas</h3>
+14:   <% @exemplo.duvidas.each do |d| %>
+15:     <b>Autor:</b>
+16:     <%=h d.autor %>
+17:     <br>
+
+    app/views/exemplos/show.html.erb:14
+    app/controllers/exemplos_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:18:10) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/home/diego/ruby/Minicurso-Asser/curso/app/models/exemplo.rb:2: syntax error, unexpected tIVAR, expecting kEND):
+  app/controllers/exemplos_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:18:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: duvidas: SELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such table: duvidas: SELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) ) on line #14 of app/views/exemplos/show.html.erb:
+11: </p>
+12: 
+13: <h3>Dúvidas</h3>
+14:   <% @exemplo.duvidas.each do |d| %>
+15:     <b>Autor:</b>
+16:     <%=h d.autor %>
+17:     <br>
+
+    app/views/exemplos/show.html.erb:14
+    app/controllers/exemplos_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (150.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE TABLE "duvidas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "email" varchar(255), "exemplo_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091014170118')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("duvidas")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("exemplos")[0m
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:19:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (0.3ms)[0m   [0mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #22 of app/views/exemplos/show.html.erb:
+19:     <%= simple_format(d.duvida) %>
+20:   <% end %>
+21: 
+22: <% form_for(@duvida) do |f| %>
+23:   <%= f.error_messages %>
+24: 
+25:   <p>
+
+    app/views/exemplos/show.html.erb:22
+    app/controllers/exemplos_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (139.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:24:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (0.3ms)[0m   [0mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 41ms (View: 30, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:28:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (0.3ms)[0m   [0mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 30ms (View: 18, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#new (for ::ffff:127.0.0.1 at 2009-10-14 14:28:10) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"autor"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+Rendering template within layouts/exemplos
+Rendering exemplos/new
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/exemplos/new]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:30:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.7ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+ERROR: compiling _run_erb_app47views47exemplos47show46html46erb RAISED compile error
+/home/diego/ruby/Minicurso-Asser/curso/app/views/exemplos/show.html.erb:31: syntax error, unexpected tSYMBEG
+...oncat(( f.text_field :email. :id => "teste").to_s); @output_...
+                              ^
+Function body:           def _run_erb_app47views47exemplos47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n  <b>Nome:</b>\n  "
+
+; @output_buffer.concat((h @exemplo.nome ).to_s); @output_buffer.concat "\n</p>\n\n<p>\n  <b>Codigo:</b>\n  <pre name=\"code\" class=\"ruby\">\n      "
+
+
+
+
+
+; @output_buffer.concat(( @exemplo.codigo ).to_s); @output_buffer.concat "\n  </pre>\n</p>\n\n<h3>D\303\272vidas</h3>\n  "
+
+
+
+
+;  @exemplo.duvidas.each do |d| ; @output_buffer.concat "\n    <b>Autor:</b>\n    "
+
+; @output_buffer.concat((h d.autor ).to_s); @output_buffer.concat "\n    <br>\n    <b>D\303\272vida</b>\n    "
+
+
+; @output_buffer.concat(( simple_format(d.duvida) ).to_s); @output_buffer.concat "\n  "
+;  end ; @output_buffer.concat "\n\n"
+
+;  form_for :duvida , :url => {:action => "new" }do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :autor ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :autor ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :email. :id => "teste").to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Salvar' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/diego/ruby/Minicurso-Asser/curso/app/views/exemplos/show.html.erb:41:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/diego/ruby/Minicurso-Asser/curso/app/controllers/exemplos_controller.rb:18:in `show'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/diego/ruby/Minicurso-Asser/curso/app/views/exemplos/show.html.erb:31: syntax error, unexpected tSYMBEG
+...oncat(( f.text_field :email. :id => "teste").to_s); @output_...
+                              ^) on line #31 of app/views/exemplos/show.html.erb:
+28:   </p>
+29:   <p>
+30:     <%= f.label :email %><br />
+31:     <%= f.text_field :email. :id => "teste"%>
+32:   </p>
+33:   <p>
+34:     <%= f.submit 'Salvar' %>
+
+    app/views/exemplos/show.html.erb:41:in `compile!'
+    app/controllers/exemplos_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:30:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 30ms (View: 18, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:32:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.7ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 32ms (View: 21, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:32:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 30ms (View: 19, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:33:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 31ms (View: 20, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#new (for ::ffff:127.0.0.1 at 2009-10-14 14:33:08) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "autor"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+Rendering template within layouts/exemplos
+Rendering exemplos/new
+Completed in 22ms (View: 9, DB: 0) | 200 OK [http://localhost/exemplos/new]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:35:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 29ms (View: 19, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:50:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 48ms (View: 21, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 14:50:56) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "autor"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+ActionController::UnknownAction (No action responded to enviar. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:53:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 32ms (View: 21, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#enviar_recado (for ::ffff:127.0.0.1 at 2009-10-14 14:53:13) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "autor"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+ActionController::UnknownAction (No action responded to enviar_recado. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:54:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 31ms (View: 20, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ApplicationController#index (for ::ffff:127.0.0.1 at 2009-10-14 14:54:41) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "autor"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+ActionController::RoutingError (No route matches "/duvida/enviar_recado" with {:method=>:post}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for ::ffff:127.0.0.1 at 2009-10-14 14:55:11) [GET]
+
+ActionController::RoutingError (No route matches "/exemplo" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ExemplosController#index (for ::ffff:127.0.0.1 at 2009-10-14 14:55:15) [GET]
+  [4;35;1mExemplo Load (0.9ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/index
+Completed in 45ms (View: 12, DB: 1) | 200 OK [http://localhost/exemplos]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 14:55:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (0.3ms)[0m   [0mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 32ms (View: 12, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ApplicationController#index (for ::ffff:127.0.0.1 at 2009-10-14 14:56:13) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "autor"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+ActionController::RoutingError (No route matches "/duvida/enviar_recado" with {:method=>:post}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for ::ffff:127.0.0.1 at 2009-10-14 14:56:32) [GET]
+
+ActionController::RoutingError (No route matches "/duvidas" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for ::ffff:127.0.0.1 at 2009-10-14 14:58:10) [GET]
+
+ActionController::RoutingError (No route matches "/duvidas" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for ::ffff:127.0.0.1 at 2009-10-14 14:59:13) [GET]
+
+ActionController::RoutingError (No route matches "/duvidas" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for ::ffff:127.0.0.1 at 2009-10-14 15:01:50) [GET]
+
+ActionController::RoutingError (No route matches "/Duvidas" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for ::ffff:127.0.0.1 at 2009-10-14 15:03:14) [GET]
+
+ActionController::RoutingError (No route matches "/duvidas" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DuvidasController#index (for ::ffff:127.0.0.1 at 2009-10-14 15:03:38) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 15:04:32) [GET]
+Rendering duvidas/enviar
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/duvidas/enviar]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 15:05:46) [GET]
+
+ActionView::MissingTemplate (Missing template duvidas/enviar.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 15:18:05) [GET]
+
+ActionView::MissingTemplate (Missing template duvidas/enviar.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 15:18:11) [GET]
+  [4;36;1mExemplo Load (1.1ms)[0m   [0;1mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 158ms (View: 90, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 15:18:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 54ms (View: 42, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ApplicationController#index (for ::ffff:127.0.0.1 at 2009-10-14 15:18:23) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "autor"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+ActionController::RoutingError (No route matches "/duvida/enviar_recado" with {:method=>:post}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 15:19:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.7ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 37ms (View: 24, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing DuvidasController#enviar_recado (for ::ffff:127.0.0.1 at 2009-10-14 15:19:51) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "autor"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+ActionController::UnknownAction (No action responded to enviar_recado. Actions: enviar):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 15:20:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.7ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 37ms (View: 22, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 15:20:07) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "autor"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: autor):
+  app/controllers/duvidas_controller.rb:5:in `new'
+  app/controllers/duvidas_controller.rb:5:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (23.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 15:20:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.7ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 38ms (View: 24, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 15:21:01) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "nome"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: duvida):
+  app/controllers/duvidas_controller.rb:5:in `new'
+  app/controllers/duvidas_controller.rb:5:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (97.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("duvidas")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("exemplos")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("duvidas")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("exemplos")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("duvidas")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("exemplos")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("duvidas")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("exemplos")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("duvidas")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("exemplos")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("duvidas")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("exemplos")[0m
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 15:25:38) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "nome"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: duvida):
+  app/controllers/duvidas_controller.rb:5:in `new'
+  app/controllers/duvidas_controller.rb:5:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "exemplos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "codigo" text, "visivel" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091014143902')[0m
+Migrating to CreateDuvidas (20091014170118)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "duvidas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "email" varchar(255), "exemplo_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091014170118')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("duvidas")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("exemplos")[0m
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 15:28:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.2ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Exemplo with ID=1):
+  app/controllers/exemplos_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 15:28:13) [GET]
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#index (for ::ffff:127.0.0.1 at 2009-10-14 15:28:16) [GET]
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/index
+Completed in 29ms (View: 21, DB: 1) | 200 OK [http://localhost/exemplos]
+
+
+Processing ExemplosController#new (for ::ffff:127.0.0.1 at 2009-10-14 15:28:19) [GET]
+Rendering template within layouts/exemplos
+Rendering exemplos/new
+Completed in 29ms (View: 19, DB: 0) | 200 OK [http://localhost/exemplos/new]
+
+
+Processing ExemplosController#create (for ::ffff:127.0.0.1 at 2009-10-14 15:28:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE=", "exemplo"=>{"visivel"=>"1", "nome"=>"Exemplo 1 - Fatorial", "codigo"=>"# Exemplo 1\r\n# Calcula o fatorial de um numero de forma recursiva.\r\n# Este e em bom exemplo do poder do ruby, por nao utilizar tipo primitivos, e possivel alcancar resultados mais facilmente do que em outras linguagens, tipo pascal ou c. \r\ndef fatorial(n)\r\n    if(n > 1)\r\n        n * fatorial(n-1)\r\n    else\r\n        1\r\n    end\r\nend\r\n# Chama o metodo fatorial e passa como argumento o primeiro argumento passado na chamada da rotina por linha de comando.\r\nputs fatorial(ARGV[0].to_i)"}}
+  [4;36;1mExemplo Create (0.8ms)[0m   [0;1mINSERT INTO "exemplos" ("visivel", "created_at", "nome", "updated_at", "codigo") VALUES('t', '2009-10-14 18:28:43', 'Exemplo 1 - Fatorial', '2009-10-14 18:28:43', '# Exemplo 1
+# Calcula o fatorial de um numero de forma recursiva.
+# Este e em bom exemplo do poder do ruby, por nao utilizar tipo primitivos, e possivel alcancar resultados mais facilmente do que em outras linguagens, tipo pascal ou c. 
+def fatorial(n)
+ if(n > 1)
+ n * fatorial(n-1)
+ else
+ 1
+ end
+end
+# Chama o metodo fatorial e passa como argumento o primeiro argumento passado na chamada da rotina por linha de comando.
+puts fatorial(ARGV[0].to_i)')[0m
+Redirected to http://localhost:3000/exemplos/1
+Completed in 24ms (DB: 1) | 302 Found [http://localhost/exemplos]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 15:28:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.9ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 87ms (View: 43, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 15:28:55) [GET]
+  [4;35;1mExemplo Load (1.0ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 79ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 15:28:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.7ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (0.3ms)[0m   [0mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 15:29:00) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "nome"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: duvida):
+  app/controllers/duvidas_controller.rb:5:in `new'
+  app/controllers/duvidas_controller.rb:5:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("duvidas")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("exemplos")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+Migrating to AddDuvidaToDuvidas (20091014184017)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091014184017')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("duvidas")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("exemplos")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+Migrating to AddDuvidaInDuvidas (20091014184212)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+Migrating to AddDuvidaInDuvidas (20091014184212)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+Migrating to AddDuvidaInDuvidas (20091014184212)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExemplos (20091014143902)
+Migrating to CreateDuvidas (20091014170118)
+Migrating to AddDuvidaInDuvidas (20091014184212)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (17.3ms)[0m   [0mALTER TABLE "duvidas" ADD "duvida" text[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091014184212')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("duvidas")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("exemplos")[0m
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 16:00:39) [GET]
+  [4;36;1mExemplo Load (1.6ms)[0m   [0;1mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 60ms (View: 37, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:00:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 48ms (View: 37, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:00:45) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "nome"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+  [4;35;1mDuvida Create (0.8ms)[0m   [0mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:00:45', NULL, '', '2009-10-14 19:00:45', '', '')[0m
+
+ActionView::MissingTemplate (Missing template duvidas/enviar.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:02:19) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"", "nome"=>"", "email"=>""}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+  [4;36;1mDuvida Create (0.6ms)[0m   [0;1mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:02:19', NULL, '', '2009-10-14 19:02:19', '', '')[0m
+Rendering duvidas/enviar
+Completed in 41ms (View: 9, DB: 1) | 200 OK [http://localhost/duvidas/enviar]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 16:08:02) [GET]
+  [4;35;1mExemplo Load (49.4ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 61ms (View: 5, DB: 49) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:08:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (3.0ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (0.3ms)[0m   [0mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 36ms (View: 20, DB: 3) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:08:20) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"O que e recursao.", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+  [4;36;1mDuvida Create (0.5ms)[0m   [0;1mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:08:20', NULL, 'Diego Rubin', '2009-10-14 19:08:20', 'O que e recursao.', 'rubin.diego@gmail.com')[0m
+
+ArgumentError (too few arguments):
+  app/controllers/duvidas_controller.rb:8:in `format'
+  app/controllers/duvidas_controller.rb:8:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (147.0ms)
+Rendered rescues/_request_and_response (3.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:08:57) [GET]
+Rendering duvidas/enviar
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/duvidas/enviar]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:09:00) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"O que e recursao.", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+  [4;35;1mDuvida Create (0.5ms)[0m   [0mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:09:00', NULL, 'Diego Rubin', '2009-10-14 19:09:00', 'O que e recursao.', 'rubin.diego@gmail.com')[0m
+
+ArgumentError (too few arguments):
+  app/controllers/duvidas_controller.rb:8:in `format'
+  app/controllers/duvidas_controller.rb:8:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:10:14) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"O que e recursao.", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+  [4;36;1mDuvida Create (0.6ms)[0m   [0;1mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:10:14', NULL, 'Diego Rubin', '2009-10-14 19:10:14', 'O que e recursao.', 'rubin.diego@gmail.com')[0m
+
+NameError (undefined local variable or method `parar' for #<DuvidasController:0xb73a2598>):
+  app/controllers/duvidas_controller.rb:7:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:10:37) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"O que e recursao.", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+  [4;35;1mDuvida Create (0.5ms)[0m   [0mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:10:37', NULL, 'Diego Rubin', '2009-10-14 19:10:37', 'O que e recursao.', 'rubin.diego@gmail.com')[0m
+
+ArgumentError (too few arguments):
+  app/controllers/duvidas_controller.rb:8:in `format'
+  app/controllers/duvidas_controller.rb:8:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.5ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:10:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.7ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (0.3ms)[0m   [0mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 57ms (View: 39, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:10:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.9ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (0.3ms)[0m   [0mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 28ms (View: 13, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:10:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.6ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (0.3ms)[0m   [0mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:11:41) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"O que e recursao.", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+  [4;36;1mDuvida Create (0.5ms)[0m   [0;1mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:11:41', NULL, 'Diego Rubin', '2009-10-14 19:11:41', 'O que e recursao.', 'rubin.diego@gmail.com')[0m
+
+ArgumentError (too few arguments):
+  app/controllers/duvidas_controller.rb:8:in `format'
+  app/controllers/duvidas_controller.rb:8:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (199.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:12:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:13:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:13:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.7ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 115ms (View: 18, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:13:09) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"O que e recursao.", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+  [4;35;1mDuvida Create (0.6ms)[0m   [0mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:13:09', NULL, 'Diego Rubin', '2009-10-14 19:13:09', 'O que e recursao.', 'rubin.diego@gmail.com')[0m
+Rendering duvidas/sucesso
+Completed in 33ms (View: 8, DB: 1) | 200 OK [http://localhost/duvidas/enviar]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:13:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.7ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;35;1mDuvida Load (3.0ms)[0m   [0mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 30ms (View: 14, DB: 4) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 16:14:27) [GET]
+  [4;36;1mExemplo Load (0.9ms)[0m   [0;1mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 40ms (View: 33, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:22:59) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"O que e recursao.", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+  [4;35;1mDuvida Create (0.6ms)[0m   [0mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:22:59', NULL, 'Diego Rubin', '2009-10-14 19:22:59', 'O que e recursao.', 'rubin.diego@gmail.com')[0m
+
+ActionView::MissingTemplate (Missing template duvidas/show.erb in view path app/views):
+  app/controllers/duvidas_controller.rb:7:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:24:19) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"O que e recursao.", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+  [4;36;1mDuvida Create (0.5ms)[0m   [0;1mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:24:19', NULL, 'Diego Rubin', '2009-10-14 19:24:19', 'O que e recursao.', 'rubin.diego@gmail.com')[0m
+Rendering duvidas/sucesso
+Completed in 42ms (View: 1, DB: 1) | 200 OK [http://localhost/duvidas/enviar]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:24:56) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"O que e recursao.", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE="}
+
+NameError (undefined local variable or method `parar' for #<DuvidasController:0xb72ec16c>):
+  app/controllers/duvidas_controller.rb:3:in `enviar'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 16:26:50) [GET]
+  [4;35;1mExemplo Load (1.0ms)[0m   [0mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 47ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:26:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExemplo Load (0.7ms)[0m   [0;1mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+
+NameError (undefined local variable or method `parar' for #<ExemplosController:0xb7517360>):
+  app/controllers/exemplos_controller.rb:17:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:28:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.5ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 35ms (View: 24, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:29:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:29:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.3ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 29ms (View: 16, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:29:50) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"fdafd", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE=", "id"=>"1"}
+  [4;35;1mDuvida Create (0.5ms)[0m   [0mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:29:50', NULL, 'Diego Rubin', '2009-10-14 19:29:50', 'fdafd', 'rubin.diego@gmail.com')[0m
+Rendering duvidas/sucesso
+Completed in 20ms (View: 1, DB: 1) | 200 OK [http://localhost/duvidas/enviar/1]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:30:54) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"fdafd", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE=", "id"=>"1"}
+  [4;36;1mDuvida Create (0.9ms)[0m   [0;1mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:30:54', 1, 'Diego Rubin', '2009-10-14 19:30:54', 'fdafd', 'rubin.diego@gmail.com')[0m
+Rendering duvidas/sucesso
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://localhost/duvidas/enviar/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:30:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (3.5ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+
+ActionView::TemplateError (undefined method `autor' for #<Duvida:0xb78cf624>) on line #16 of app/views/exemplos/show.html.erb:
+13: <h3>Dúvidas</h3>
+14:   <% @exemplo.duvidas.each do |d| %>
+15:     <b>Autor:</b>
+16:     <%=h d.autor %>
+17:     <br>
+18:     <b>Dúvida</b>
+19:     <%= simple_format(d.duvida) %>
+
+    app/views/exemplos/show.html.erb:16
+    app/views/exemplos/show.html.erb:14
+    app/controllers/exemplos_controller.rb:17:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (105.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:32:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.6ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (0.7ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 44ms (View: 32, DB: 1) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing DuvidasController#enviar (for ::ffff:127.0.0.1 at 2009-10-14 16:32:19) [POST]
+  Parameters: {"commit"=>"Salvar", "duvida"=>{"duvida"=>"O que é recursao?", "nome"=>"Diego Rubin", "email"=>"rubin.diego@gmail.com"}, "authenticity_token"=>"gVvrXhi44kCEVCt5y3ADVBZzMTvGZglvC+wwWg2BCIE=", "id"=>"1"}
+  [4;35;1mDuvida Create (3.4ms)[0m   [0mINSERT INTO "duvidas" ("created_at", "exemplo_id", "nome", "updated_at", "duvida", "email") VALUES('2009-10-14 19:32:19', 1, 'Diego Rubin', '2009-10-14 19:32:19', 'O que é recursao?', 'rubin.diego@gmail.com')[0m
+Rendering duvidas/sucesso
+Completed in 23ms (View: 1, DB: 3) | 200 OK [http://localhost/duvidas/enviar/1]
+
+
+Processing HomeController#index (for ::ffff:127.0.0.1 at 2009-10-14 16:32:24) [GET]
+  [4;36;1mExemplo Load (1.0ms)[0m   [0;1mSELECT * FROM "exemplos" [0m
+Rendering home/index
+Completed in 56ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:32:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (0.9ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (1.0ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 37ms (View: 25, DB: 2) | 200 OK [http://localhost/exemplos/1]
+
+
+Processing ExemplosController#show (for ::ffff:127.0.0.1 at 2009-10-14 16:33:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mExemplo Load (1.1ms)[0m   [0mSELECT * FROM "exemplos" WHERE ("exemplos"."id" = 1) [0m
+Rendering template within layouts/exemplos
+Rendering exemplos/show
+  [4;36;1mDuvida Load (1.0ms)[0m   [0;1mSELECT * FROM "duvidas" WHERE ("duvidas".exemplo_id = 1) [0m
+Completed in 45ms (View: 32, DB: 2) | 200 OK [http://localhost/exemplos/1]

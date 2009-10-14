@@ -1,0 +1,47 @@
+<p>
+  <b>Nome:</b>
+  <%=h @exemplo.nome %>
+</p>
+
+<p>
+  <b>Codigo:</b>
+  <pre name="code" class="ruby">
+      <%= @exemplo.codigo %>
+  </pre>
+</p>
+
+<h3>Dúvidas</h3>
+  <% @exemplo.duvidas.each do |d| %>
+    <b>Nome:</b>
+    <%=h d.nome %>
+    <br>
+    <b>Email:</b>
+    <%=h d.email %>
+    <br>
+    <b>Dúvida</b>
+    <%= simple_format(d.duvida) %>
+    <hr />
+  <% end %>
+
+<h3>Envie seu Recado</h3>
+
+<% form_for :duvida , :url => {:controller => "duvidas", :action => "enviar" , :id => params[:id] }do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :duvida, "Dúvida" %><br />
+    <%= f.text_area :duvida %>
+  </p>
+  <p>
+    <%= f.submit 'Salvar' %>
+  </p>
+<% end %>
+

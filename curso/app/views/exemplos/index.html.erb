@@ -1,0 +1,24 @@
+<h1>Listing exemplos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Codigo</th>
+    <th>Visivel</th>
+  </tr>
+
+<% @exemplos.each do |exemplo| %>
+  <tr>
+    <td><%=h exemplo.nome %></td>
+    <td><%=h exemplo.codigo %></td>
+    <td><%=h exemplo.visivel %></td>
+    <td><%= link_to 'Show', exemplo %></td>
+    <td><%= link_to 'Edit', edit_exemplo_path(exemplo) %></td>
+    <td><%= link_to 'Destroy', exemplo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New exemplo', new_exemplo_path %>

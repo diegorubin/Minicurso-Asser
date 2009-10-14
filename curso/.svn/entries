@@ -1,0 +1,119 @@
+10
+
+dir
+0
+svn+ssh://pandorabox.no-ip.org/Repos/diego/ruby/Minicurso-Asser/curso
+svn+ssh://pandorabox.no-ip.org/Repos/diego
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+47462c79-b3ad-de11-b99e-000ae6e70080
+
+test
+dir
+
+
+
+add
+
+app
+dir
+
+
+
+add
+
+tmp
+dir
+
+
+
+add
+
+log
+dir
+
+
+
+add
+
+Rakefile
+file
+
+
+
+add
+
+script
+dir
+
+
+
+add
+
+doc
+dir
+
+
+
+add
+
+config
+dir
+
+
+
+add
+
+db
+dir
+
+
+
+add
+
+lib
+dir
+
+
+
+add
+
+README
+file
+
+
+
+add
+
+vendor
+dir
+
+
+
+add
+
+public
+dir
+
+
+
+add
+

@@ -1,0 +1,77 @@
+10
+
+dir
+0
+svn+ssh://pandorabox.no-ip.org/Repos/diego/ruby/Minicurso-Asser/curso/config
+svn+ssh://pandorabox.no-ip.org/Repos/diego
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+47462c79-b3ad-de11-b99e-000ae6e70080
+
+locales
+dir
+
+
+
+add
+
+routes.rb
+file
+
+
+
+add
+
+database.yml
+file
+
+
+
+add
+
+boot.rb
+file
+
+
+
+add
+
+environment.rb
+file
+
+
+
+add
+
+initializers
+dir
+
+
+
+add
+
+environments
+dir
+
+
+
+add
+

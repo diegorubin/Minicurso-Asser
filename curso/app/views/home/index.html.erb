@@ -1,0 +1,9 @@
+<h1>Minicurso de Introdução ao Ruby</h1>
+<h2>Exemplos</h2>
+
+<% @exemplos.each do |e| %>
+  <% if e.visivel %>
+    <%= link_to e.nome, e %> <br />
+  <% end %>
+<% end %>
+
