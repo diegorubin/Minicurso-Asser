@@ -49,8 +49,8 @@ class EquacaoGtk < Gtk::Window
         lblX1.text = "Resultado não está no plano real."
         lblX2.text = ""
       else
-        lblX1.text = r[0].to_s
-        lblX2.text = r[1].to_s
+        lblX1.text ="X1: " + r[0].to_s
+        lblX2.text ="X2: " + r[1].to_s
       end
     end
     signal_connect("destroy") { Gtk.main_quit }
@@ -59,10 +59,12 @@ class EquacaoGtk < Gtk::Window
 
 end
 
+#Inicia os variaveis do Gtk
 Gtk.init
 
 window = EquacaoGtk.new("Equação do Segundo Grau")
 window.show_all
 
+#Loop Principal
 Gtk.main
 
